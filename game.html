@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose the Correct Color</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game">
+            <div id="ques-container">
+                <h2 id="ques-number">Question 1 of 10</h2>
+                <h2 id="question">Choose the green color:</h2>
+                <div class="options">
+                    <button class="option" data-correct="false" style="background-color: red;">a. Red</button>
+                    <button class="option" data-correct="true" style="background-color: green;">b. Green</button>
+                    <button class="option" data-correct="false" style="background-color: yellow;">c. Yellow</button>
+                    <button class="option" data-correct="false" style="background-color: blue;">d. Blue</button>
+                </div>
+            </div>
+            <div class="navigation_button">
+                <button id="prev-btn" disabled>Previous</button>
+                <button id="next-btn">Next</button>
+                <button id="quit-btn">Quit</button>
+            </div>
+            <div id="show-answer">The correct option is:<span id="correct-answer"></span></div>
+        </div>
+    </div>
+    <div class="instructions">
+        <h2 class="instructions-text">Instructions</h2>
+        <p>Choose the correct color corresponding to the given color code from the options provided.</p>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

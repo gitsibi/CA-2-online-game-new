@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Result</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <div class="container">
+        <div class="result-box">
+            <h2 class="res_text">Result</h2>
+            <p id="result"></p>
+            <button id="playagain_btn">Play Again</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const score = localStorage.getItem('score');
+            document.getElementById('result').innerText = `${score} out of 10\nScore: ${score * 20}`;
+            
+            document.getElementById('playagain_btn').addEventListener('click', () => {
+                localStorage.removeItem('score'); 
+                window.location.href = 'game.html'; 
+            });
+        });
+    </script>
+</body>
+</html>
